@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <!-- 名称 -->
+    <TextView
+        android:id="@+id/xq_item_mc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:textColor="@color/blueText" />
+
+    <!-- 实际 -->
+    <TextView
+        android:id="@+id/xq_item_sj"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- 配比 -->
+    <TextView
+        android:id="@+id/xq_item_pb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- 误差 -->
+    <TextView
+        android:id="@+id/xq_item_wc"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- 误差率 -->
+    <TextView
+        android:id="@+id/xq_item_wcl"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+</LinearLayout>

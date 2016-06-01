@@ -1,0 +1,101 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    	<item name="android:actionBarStyle">@style/WindowTitle</item> 
+    </style>
+
+    <style name="MainTheme" parent="android:Theme">
+        <item name="android:windowTitleSize">50dp</item>
+        <item name="android:windowTitleBackgroundStyle">@color/gray</item>
+    </style>
+
+    <style name="HntqdTheme" parent="android:Theme">
+        <item name="android:windowTitleSize">50dp</item>
+        <item name="android:windowTitleBackgroundStyle">@color/gray</item>
+    </style>
+    
+    <style name="Text">
+         <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="Title" parent="Text">
+         <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="Title2" parent="Text">
+         <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="Title3">
+         <item name="android:textSize">10sp</item>
+         <item name="android:textColor">@color/blueText</item>
+         
+    </style>
+    
+    <style name="Title4" parent="Text">
+         <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="TitleBid">
+         <item name="android:textSize">14sp</item>
+         <item name="android:textColor">@color/orange</item>
+    </style>
+    
+    <style name="Font16" parent="Text">
+         <item name="android:textSize">16sp</item>
+         <item name="android:weightSum">10</item>
+    </style>
+	
+    <style name="Arraw" parent="Text">
+         <item name="android:textSize">14sp</item>
+         <item name="android:fontFamily">宋体</item>
+    </style>
+    
+    <style name="TitleLarger" parent="Text">
+         <item name="android:textSize">30sp</item>
+         <item name="android:weightSum">10</item>
+    </style>
+    
+    <style name="TitleLargerX" parent="Text">
+         <item name="android:textSize">40sp</item>
+         <item name="android:weightSum">10</item>
+    </style>
+    
+    <style name="TitleLargerGreen" parent="TitleLarger">
+         <item name="android:textColor">@color/green</item>
+    </style>
+    
+    <style name="TitleLargerRed" parent="TitleLarger">
+        <item name="android:textSize">30sp</item>
+         <item name="android:textColor">@color/red</item>
+    </style>
+    
+    <style name="Font12Orange" parent="Text">
+         <item name="android:textSize">12sp</item>
+         <item name="android:textColor">@color/orange</item>
+    </style>
+    
+    <style name="WindowTitle" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/black2</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.Holo.Widget.ActionBar.Title.Own</item>
+    </style>
+    
+    <style name="TextAppearance.Holo.Widget.ActionBar.Title.Own" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title"> 
+		<item name="android:textSize">12sp</item> 
+		<item name="android:textColor">@color/white</item>
+	</style> 
+</resources>

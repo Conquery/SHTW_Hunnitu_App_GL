@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_selectdevice"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/deepSkyBlue">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="444444"
+            android:textColor="@color/black2"
+            android:textSize="20dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shapegrey"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/buttonBgBlue">
+
+            <TextView
+                android:id="@+id/project_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="false"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/hntqd_title"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/weather_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RadioGroup
+                android:id="@+id/hege_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1.2"
+                android:background="@drawable/radiosharp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_hege"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="合格" />
+
+                <RadioButton
+                    android:id="@+id/radio_buhege"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="不合格" />
+
+                <RadioButton
+                    android:id="@+id/radio_youxiao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="有效" />
+
+                <RadioButton
+                    android:id="@+id/radio_wuxiao"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/radio_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="无效" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/hntqd_selectDevice"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectdevice_selector"
+                    android:drawableRight="@drawable/box"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="@string/selectDevice"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/hntqd_selectTestType"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectdevice_selector"
+                    android:drawableRight="@drawable/box"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="@string/selectTestType"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 时间选择框以及查询框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="5dp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/hntqd_first_choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/selecttime_selector"
+                android:drawableRight="@drawable/calendar"
+                android:gravity="center"
+                android:inputType="datetime"
+                android:singleLine="true"
+                android:text="2012-12-12"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/hntqd_second_choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/selecttime_selector"
+                android:drawableRight="@drawable/calendar"
+                android:gravity="center"
+                android:inputType="datetime"
+                android:singleLine="true"
+                android:text="2012-12-12"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/hntqd_chaxun_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@drawable/btnsearch_selector"
+                android:gravity="center"
+                android:text="@string/unit_search"
+                android:textSize="14sp"
+                android:height="30dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/hntqd_title_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/yellowgreen" />
+
+        <ViewFlipper
+            android:id="@+id/hntqd_Flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:autoStart="false"
+            android:background="@drawable/groupsharp"
+            android:flipInterval="1000"
+            android:persistentDrawingCache="animation">
+
+            <ListView
+                android:id="@+id/hntqd_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/lightgray"
+                android:dividerHeight="3dp" />
+        </ViewFlipper>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center|center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/popdialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal">
+
+        <com.shtoone.glhnt.ui.CircleLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/cycleblack"
+            circle:radius="100dp">
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dip">
+
+                <ImageView
+                    android:id="@+id/item_image1"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/cyc10" />
+
+                <TextView
+                    android:id="@+id/item_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sys_menu_yalijishiyan"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip">
+
+                <ImageView
+                    android:id="@+id/item_image2"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/cyc11" />
+
+                <TextView
+                    android:id="@+id/item_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sys_menu_wannengjishiyan"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/RelativeLayout_Item3"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingBottom="5dip">-->
+            <!--<ImageView android:id="@+id/item_image3"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:src="@drawable/cyc13"-->
+            <!--android:layout_width="64dip"-->
+            <!--android:layout_height="64dip" />-->
+
+            <!--<TextView android:layout_below="@id/item_image3"-->
+            <!--android:id="@+id/item_text3"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:text="@string/sys_menu_gangjinhanjiejietou_j" />-->
+            <!--</RelativeLayout>-->
+
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip">
+
+                <ImageView
+                    android:id="@+id/item_image4"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/cyc14" />
+
+                <TextView
+                    android:id="@+id/item_text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image4"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="7dp"
+                    android:text="@string/sys_menu_wannengjibuhege"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip">
+
+                <ImageView
+                    android:id="@+id/item_image5"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/cyc2" />
+
+                <TextView
+                    android:id="@+id/item_text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image5"
+                    android:layout_centerHorizontal="true"
+                    android:paddingRight="6dp"
+                    android:text="@string/sys_menu_yalijibuhege"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Item6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip">
+
+                <ImageView
+                    android:id="@+id/item_image6"
+                    android:layout_width="64dip"
+                    android:layout_height="64dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/cyc8" />
+
+                <TextView
+                    android:id="@+id/item_text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_image6"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/bhz_menu_zonghetongji"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </com.shtoone.glhnt.ui.CircleLayout>
+
+    </LinearLayout>
+</LinearLayout>

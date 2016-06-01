@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shtoone.glhnt">
+
+    <!-- 访问internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- zxing -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- 【可选】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <permission
+        android:name="com.shtoone.glhnt.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.shtoone.glhnt.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <application
+        android:name=".activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_dk"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light">
+
+        <!-- ■■■■■■■■■START 腾讯信鸽配置 ■■■■■■■■■ -->
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理 -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，此选项有助于提高抵达率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.shtoone.glhnt.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 自定义处理收到通知时的Receiver： -->
+        <receiver android:name=".serviceDao.MessageReceiver">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100141009" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="A36QA372HALB" />
+        <!-- ■■■■■■■■■ 腾讯信鸽配置 END ■■■■■■■■■ -->
+
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 混泥土强度列表界面 -->
+        <activity
+            android:name=".activity.SYS_HuNiTuQiangDu_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 混泥土详情界面 -->
+        <activity
+            android:name=".activity.SYS_HuNiTuQiangDu_XqActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 钢筋拉力列表界面 -->
+        <activity
+            android:name=".activity.SYS_GangJingLaLi_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 钢筋拉力详情界面 -->
+        <activity
+            android:name=".activity.SYS_GangJingLaLi_XqActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 钢筋焊接接头列表界面 -->
+        <activity
+            android:name=".activity.SYS_GangJingHJieTou_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 钢筋焊接接头详情界面 -->
+
+        <!-- 万能机列表界面 -->
+        <activity
+            android:name=".activity.SYS_Wannengji_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 万能机列表界面 -->
+
+
+        <!-- 钢筋机械连接接头列表界面 -->
+        <activity
+            android:name=".activity.SYS_GangJingJXLJJieTou_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 钢筋机械连接接头详情界面 -->
+
+
+        <!-- 不合格试验处置列表界面 -->
+        <activity
+            android:name=".activity.SYS_BuHeGeSYChuZhi_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 不合格试验处置列表界面 -->
+        <activity
+            android:name=".activity.SYS_Wannengji_BuHeGeSYChuZhi_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 不合格试验处置列表界面 -->
+        <activity
+            android:name=".activity.SYS_Yaliji_BuHeGeSYChuZhi_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+
+        <!-- 不合格试验处置详情界面 -->
+        <activity
+            android:name=".activity.SYS_BuHeGeSYChuZhi_XqActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 拌合站生产数据查询列表界面 -->
+        <activity
+            android:name=".activity.BHZ_SCshujuchaxun_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 拌合站生产数据查询详情界面 -->
+        <activity
+            android:name=".activity.BHZ_SCshujuchaxun_XqActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 拌合站处置报警列表界面 -->
+        <activity
+            android:name=".activity.BHZ_ChaobiaoChuZHi_Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 拌合站处置报警详情界面 -->
+        <activity
+            android:name=".activity.BHZ_ChaobiaoChuZHi_XqActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme" />
+
+        <!-- 试验室统计分析 -->
+        <activity
+            android:name=".activity.SysTongjfenxiActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+
+        <!-- 组织结构面板 -->
+        <activity
+            android:name=".activity.CommZuhijiegou"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+
+        <!-- 拌和站材料用量 -->
+        <activity
+            android:name=".activity.BHZ_CailiaoyongliangActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+        <!-- 消息推送接收 -->
+        <activity
+            android:name=".activity.PushMessageListActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+        <!-- 拌和站综合统计分析 -->
+        <activity
+            android:name=".activity.BHZ_TongjifenxiActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+        <!-- 拌合站状态 -->
+        <activity
+            android:name=".activity.CommBHZStatusActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+        <!-- 关于系统 -->
+        <activity
+            android:name=".activity.OT_aboutActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+        <activity
+            android:name=".activity.BHZ_Tongjifenxi2Activity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HntqdTheme"></activity>
+    </application>
+
+</manifest>

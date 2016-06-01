@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp" >
+
+    <TextView
+        android:id="@+id/tjfx_item_shijian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.34"
+        android:text="@string/hnttjfx_fl1"
+        android:textStyle="bold"
+        android:textColor="@color/back" />
+
+    <TextView
+        android:id="@+id/tjfx_item_panshu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:text="@string/hnttjfx_fl2"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/back" />
+
+    <TextView
+        android:id="@+id/tjfx_item_fangliang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:text="@string/hnttjfx_fl3"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/back" />
+</LinearLayout>

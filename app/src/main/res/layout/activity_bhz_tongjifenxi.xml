@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frame_selectdevice"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white">
+        <!-- 组织机构 -->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="444444"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </FrameLayout>
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/buttonBgBlue">
+
+            <TextView
+                android:id="@+id/project_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="false"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/hntqd_title"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/weather_img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/selectDevice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/selectdevice_selector"
+                android:drawableRight="@drawable/box"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="@string/selectDevice"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- 时间选择框以及查询框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="5dp"
+            android:weightSum="2">
+            <!-- 开始日期 -->
+            <EditText
+                android:id="@+id/bhztjfx_first_choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/selecttime_selector"
+                android:drawableRight="@drawable/calendar"
+                android:gravity="center"
+                android:inputType="datetime"
+                android:singleLine="true"
+                android:text="2012-12-12"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <!-- 结束日期 -->
+            <EditText
+                android:id="@+id/bhztjfx_second_choice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/selecttime_selector"
+                android:drawableRight="@drawable/calendar"
+                android:gravity="center"
+                android:inputType="datetime"
+                android:singleLine="true"
+                android:text="2012-12-12"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <!-- 查询按钮 -->
+            <TextView
+                android:id="@+id/bhztjfx_chaxun_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@drawable/btnsearch_selector"
+                android:gravity="center"
+                android:text="@string/unit_search"
+                android:textSize="14sp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hntqd_title_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/yellowgreen" />
+
+        <!-- 统计周期切换 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/tjfx_btn_ji"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.33"
+                android:gravity="center"
+                android:background="@color/white"
+                android:text="@string/hnttjfx_ji"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/tjfx_btn_yue"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.33"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/hnttjfx_yue"
+                android:textColor="@color/gray"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/tjfx_btn_zhou"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.33"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/hnttjfx_zhou"
+                android:textColor="@color/gray"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <!-- 装载chart -->
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp">
+            <!-- 滚动条的子元素 -->
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <!-- 方量统计 -->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:background="@drawable/groupsharp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/chart_title"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:paddingBottom="5dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:text="@string/hnttjfx_title1"-->
+                        <!--android:textColor="@color/blueText"-->
+                        <!--android:textSize="18dp"-->
+                        <!--android:textStyle="bold" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@drawable/wrap" />-->
+                <!--</RelativeLayout>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hnttjfx_title1"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/blueText" />
+                <!-- 方量统计chart -->
+                <LinearLayout
+                    android:id="@+id/sc_fl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="vertical" />
+
+                <!-- 表头部分：时间、盘数 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.34"
+                            android:gravity="left"
+                            android:text="@string/hnttjfx_fl1"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:gravity="center_horizontal"
+                            android:text="@string/hnttjfx_fl2"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:gravity="center_horizontal"
+                            android:text="@string/hnttjfx_fl3"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/listView_fl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp" >
+                    </ListView>
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <TextView
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/back"/>
+
+                <!-- 误差统计 -->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:background="@drawable/groupsharp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/chart_title2"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:paddingBottom="5dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:text="@string/hnttjfx_title2"-->
+                        <!--android:textColor="@color/blueText"-->
+                        <!--android:textSize="18dp"-->
+                        <!--android:textStyle="bold" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@drawable/wrap" />-->
+                <!--</RelativeLayout>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hnttjfx_title2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/blueText" />
+                <!-- 误差统计chart -->
+                <LinearLayout
+                    android:id="@+id/sc_wc_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center|center_horizontal|center_vertical"
+                    android:orientation="vertical" />
+
+                <!-- 表头部分：时间、低报警、中报警、高报警 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:gravity="left"
+                            android:text="@string/hnttjfx_fl1"
+                            android:layout_marginLeft="5dp"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:gravity="center_horizontal"
+                            android:text="@string/hnttjfx_fl4"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:gravity="center_horizontal"
+                            android:text="@string/hnttjfx_fl5"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25"
+                            android:gravity="center_horizontal"
+                            android:text="@string/hnttjfx_fl6"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/blueText" />
+                    </LinearLayout>
+                    <ListView
+                        android:id="@+id/listView_wc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp" >
+                    </ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

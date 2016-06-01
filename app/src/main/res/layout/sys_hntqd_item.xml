@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/groupsharp1">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9" 
+        android:paddingLeft="5dp"
+        android:orientation="vertical">
+
+        <!-- 第一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hntqd_item_time"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="2015-9-22"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/blueText"
+                android:layout_weight="0.2"
+                android:text="@string/hntqd_item_name"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/hntqd_item_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="0.8"
+                android:text="1标压力机1"/>
+        </LinearLayout>
+
+        <!-- 第三行 -->
+		<LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/blueText"
+                android:text="@string/hntqd_item_shijianNum" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/hntqd_item_shijianNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:text="SJ-0032-9001" />
+        </LinearLayout>
+
+        <!-- 第四行 -->
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/blueText"
+                android:text="@string/hntqd_item_sjQiangdu" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/hntqd_item_sjQiangdu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:text="C30" />
+            
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/blueText"
+                android:text="@string/hntqd_item_qiangduDaibiao" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/hntqd_item_qiangduDaibiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="32.2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/blue"
+                        android:text="@string/hntqd_item_projectName" />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/hntqd_item_projectName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:text="桥墩" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/blue"
+                        android:text="@string/hntqd_item_partName" />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/hntqd_item_partName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:text="桥墩"/>
+                </LinearLayout>
+
+                <!--试验类型-->
+                <LinearLayout
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/blue"
+                        android:text="@string/hntqd_item_testType" />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/hntqd_item_testType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:text="混凝土抗压"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/hntqd_item_hege_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ok"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView 
+        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.1"
+        android:src="@drawable/arraw"/>
+</LinearLayout>

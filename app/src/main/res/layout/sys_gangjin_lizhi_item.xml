@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">"
+
+    <!-- 最大力值  -->
+    <TextView
+        android:id="@+id/txtData1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/back"
+        android:layout_weight="0.2" />
+    <!-- 抗拉强度 -->
+    <TextView
+        android:id="@+id/txtData2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textColor="@color/back"
+        android:layout_weight="0.2" />
+
+    <!-- 屈服力值 -->
+    <TextView
+        android:id="@+id/txtData3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:textColor="@color/back"
+        android:layout_weight="0.2" />
+
+    <!-- 屈服强度 -->
+    <TextView
+        android:id="@+id/txtData4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:textColor="@color/back"
+        android:layout_weight="0.2" />
+
+    <LinearLayout
+        android:layout_weight="0.2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/chakan"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="3dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/btnchakan_selector"
+            android:text="@string/hntqd_xq_chakan"/>
+    </LinearLayout>
+</LinearLayout>

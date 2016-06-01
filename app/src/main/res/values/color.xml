@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color><!--白色 --> 
+    <color name="red">#ff3300</color><!--红色 -->
+    <color name="green">#41f162</color><!--绿色 -->
+    <color name="darkgray">#999999</color><!--深灰色 --> 
+    <color name="lightgray">#cccccc</color><!--浅灰色 -->
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="black2">#272727</color><!--黑色2 -->
+    <color name="blue">#6699ff</color>
+
+    <color name="blueText">#6699ff</color> <!--文字蓝色-->
+    <color name="back">#425a7e</color><!--背景色 -->
+    <color name="row1">#425a7e</color><!--浅蓝色 -->
+    <color name="row2">#4e6484</color><!--深蓝色 -->
+    <color name="deepSkyBlue">#00b0f0</color><!--深空蓝 -->
+    <color name="copyrightText">#cee7f0</color><!--天空蓝 -->
+    <color name="buttonBgBlue">#6699ff</color><!--天空蓝 -->
+    <color name="orange">#FF8C00</color><!--橙色 -->
+    <color name="yellowgreen">#A2CD5A</color><!--黄绿色 -->
+    <color name="gray">#D4D4D4</color><!--灰色 -->
+    <color name="shapegreen">#76c045</color><!--shape绿色 -->
+    <color name="shapegred">#e81959</color><!--shape红色 -->
+    <color name="shapegrey">#999999</color><!--shape灰色 -->
+    <color name="shapegrey2">#4a4a4a</color><!--按钮深灰色 -->
+    <color name="shapeblue2">#5972a8</color><!--shape蓝色2 -->
+    <color name="shapered2">#d22d55</color>
+    <color name="shapeblue3">#0978ad</color>
+    <color name="shapeblack2">#4d4d4d</color>
+</resources>

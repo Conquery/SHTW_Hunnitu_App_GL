@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp" >
+
+    <TextView
+        android:id="@+id/tjfx_item_biaoduan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:text="@string/tjfx_biaoduan"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tjfx_item_cishu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:text="@string/tjfx_cishu"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tjfx_item_hege"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:text="@string/tjfx_hege"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tjfx_item_youxiao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:text="@string/tjfx_youxiao"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tjfx_item_buhege"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/tjfx_buhege"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tjfx_item_hegelv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/tjfx_hegelv"
+        android:textColor="@color/black" />
+
+    <!--<ImageView-->
+        <!--android:contentDescription="@string/app_name"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="0.2"-->
+        <!--android:src="@drawable/arraw" />-->
+
+</LinearLayout>

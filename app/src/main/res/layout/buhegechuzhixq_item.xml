@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/groupsharp2">
+    
+    <TextView
+        android:id="@+id/bhgcz_xq_item_id"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+        android:layout_weight="1"
+        android:textColor="@color/black2" />
+    <TextView
+        android:id="@+id/bhgcz_xq_item_lizhi"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+        android:layout_weight="1"
+        android:textColor="@color/black2" />
+    <TextView
+        android:id="@+id/bhgcz_xq_item_qufulizhi"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black2" />
+    <TextView
+        android:id="@+id/bhgcz_xq_item_qiangdu"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black2" />
+
+</LinearLayout>
